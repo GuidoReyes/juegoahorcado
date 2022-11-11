@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <section class="container">
+        <div class="logo">
+          <img src="/assets/img/Logo.svg"></img>
+        </div>
+        <button class="menu-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24">
+            <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z" />
+          </svg>
+          <svg
+            class="none"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24" >
+            <path
+              d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"/>
+          </svg>
+        </button>
+        <nav class="menu">
+          <a href="#inicio">Inicio</a>
+          <a href="#jugar">Iniciar Juego</a>
+          <a href="#agregar">Agregar Palabra</a>
+        </nav>
+      </section>
+    </header>
+    <section id="inicio" class="home">
+      <article class="hero-image" style="--hero-image: url('/assets/img/hero-image-home.jpg'); --hero-attachment: fixed">
+        <aside class="hero-image-opacity" style="--hero-opacity-color:var(--black-alpha-color);">
+          <div class="hero-image-content">
+            <h2 class="hero-image-title" style="--hero-color:var(--white-color);">
+              Bienvenid@s <br> a mi encriptador
+            </h2>
+            <a href="#jugar" class="btn">Iniciar Juego</a>
+            <a href="#agregar" class="btn1">Agregar Nueva Palabra</a>
+          </div>
+        </aside>
+      </article>
+    </section>
+    <section id="agregar" class="encrypt section container full-lg-screen">
+      <article class="cajaTexto">
+        
+          <label for="input-texto"></label>
+          <textarea class="input-texto" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui" data-form-input></textarea>
+           <div class="botones">
+            <div>
+              <input  class="btn"  type="button" value="Guardar" id="btn-guardar" data-form-btn>
+            </div>
+            <div>
+            <input class="btn1"  type="button" value="Cancelar" id="btn-cancelar" onclick="location.reload()">
+            </div>
+           </div>
+        
+      </article>
+     </section>
+     <section id="jugar" class="encrypt section container full-lg-screen">
+      <article class="contenedor">
+        
+          <svg height="250" width="200" class="figura_ahorcado">
+              <!-- Rod -->
+              <line x1="60" y1="20" x2="140" y2="20"  />
+              <line x1="140" y1="20" x2="140" y2="50" />
+              <line x1="60" y1="20" x2="60" y2="230" />
+              <line x1="20" y1="230" x2="100" y2="230" />
+
+              <!-- Head -->
+              <circle cx="140" cy="70" r="20" class="ahorcado" />
+              <!-- Body -->
+              <line x1="140" y1="90" x2="140" y2="150" class="ahorcado" />
+              <!-- Arms -->
+              <line x1="140" y1="120" x2="120" y2="100" class="ahorcado" />
+              <line x1="140" y1="120" x2="160" y2="100" class="ahorcado" />
+              <!-- Legs -->
+              <line x1="140" y1="150" x2="120" y2="180" class="ahorcado" />
+              <line x1="140" y1="150" x2="160" y2="180" class="ahorcado" />
+          </svg>
+          
+
+          <div class="contenedor_letra_usada">
+            <div id="letras_usadas"></div>
+          
+            <div class="palabra" id="frase"></div>
+          </div>
+        
+        </article>
+         <article class="botones">
+            <div  >
+                 <input  class="btn"  type="button" value="Nuevo Juego" id="btn_iniciar">
+              </div>
+              <div > 
+                <input class="btn1"  type="button" value="Desistir" id="btn_desistir" onclick="location.reload()">
+              </div>
+         </article>
+              
+         
+     
+    </section>
+    <footer class="footer">
+      <small>
+        <p class="copyright">&copy Derechos reservados por ALURA   
+        <a>alumno:</a>
+          <a href="https://www.linkedin.com/feed/?trk=homepage-basic_google-one-tap-submit"
+          target="_blank"
+          rel="noopener">
+          Guido Reyes</a></p>
+        </small>
+    </footer>
+  </body>
+  <script src="/js/script.js"></script>
+  <script src="/js/script2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</html>
